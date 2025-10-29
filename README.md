@@ -1,8 +1,9 @@
-## Betting Odds Aggregator Demo
+<img width="1080" height="360" alt="image" src="https://github.com/user-attachments/assets/95b2d0e8-9a54-4e8b-aaf2-2222f9f60c38" />
+
 
 This repository contains a Telegram bot that aggregates football betting odds from multiple bookmakers (via [The Odds API](https://the-odds-api.com)) and presents them in an intuitive flow: league → match day → match. For each upcoming fixture in the English Premier League, La Liga, and the Bundesliga, we compute implied probabilities, average them across sources, and highlight the statistically strongest outcome.
 
-> **PlayMarket eligibility:** Only users with a verified PlayMarket account and at least one completed transaction should be allowed to access the bot’s insights. Gate-keeping must be enforced in the production deployment before exposing odds or recommendations.
+> **Polymarket eligibility:** Only users with a verified Polymarket account and at least one completed transaction should be allowed to access the bot’s insights. Gate-keeping must be enforced in the production deployment before exposing odds or recommendations.
 
 ### Prerequisites
 
@@ -40,7 +41,7 @@ export TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
 python -m src.bot
 ```
 
-In Telegram, open your bot and use `/epl`, `/laliga`, or `/bundesliga` to browse match days and fixtures. Production instances must verify the caller’s PlayMarket status before responding with odds.
+In Telegram, open your bot and use `/epl`, `/laliga`, or `/bundesliga` to browse match days and fixtures. Production instances must verify the caller’s Polymarket status before responding with odds.
 
 ### Output
 
@@ -59,8 +60,8 @@ In Telegram, open your bot and use `/epl`, `/laliga`, or `/bundesliga` to browse
 
 ### Roadmap / Future Work
 
-1. **PlayMarket verification** – integrate PlayMarket authentication/transaction checks so only eligible bettors can access the bot.  
-2. **Arbitrage module** – compare PlayMarket odds with other bookmakers and alert users whenever PlayMarket deviates from consensus, enabling quicker hedging or early cash-outs.  
+1. **Polymarket verification** – integrate Polymarket authentication/transaction checks so only eligible bettors can access the bot.  
+2. **Arbitrage module** – compare polymarket odds with other bookmakers and alert users whenever Polymarket deviates from consensus, enabling quicker hedging or early cash-outs.  
 3. **Historical analytics** – persist snapshots, expose trends (volatility, spreads, consensus shifts), and surface them in the bot.  
 4. **Alerting & watchlists** – allow users to subscribe to matches/teams and receive push notifications on significant line moves.  
 5. **Infrastructure hardening** – add observability, background workers, and smarter rate-limiting before scaling to production traffic.
