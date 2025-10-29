@@ -12,34 +12,7 @@ This repository contains a Telegram bot that aggregates football betting odds fr
 3. **The Odds API key** – create/rotate in your dashboard and keep it private  
 4. **Telegram bot token** – [@polymarket_Football_Bot](https://t.me/polymarket_Football_Bot)
 
-### Quick Start (CLI demo)
 
-```bash
-cd betting-aggregator
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-export THE_ODDS_API_KEY="your-odds-api-key"
-
-# Fetch all supported leagues
-python -m src.main
-
-# Limit to specific leagues
-python -m src.main --leagues epl la_liga
-
-# Only show fixtures with active Polymarket markets
-python -m src.main --polymarket-only
-```
-
-### Run the Telegram Bot
-
-```bash
-export THE_ODDS_API_KEY="your-odds-api-key"
-export TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
-
-python -m src.bot
-```
 
 In Telegram, open your bot and use `/epl`, `/laliga`, or `/bundesliga` to browse match days and fixtures. Production instances must verify the caller’s Polymarket status before responding with odds.
 
