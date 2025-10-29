@@ -10,7 +10,7 @@ This repository contains a Telegram bot that aggregates football betting odds fr
 1. **Python 3.10+**  
 2. **Dependencies** listed in `requirements.txt`  
 3. **The Odds API key** – create/rotate in your dashboard and keep it private  
-4. **Telegram bot token** – obtained from @polymarket_Football_Bot
+4. **Telegram bot token** – [@polymarket_Football_Bot](https://t.me/polymarket_Football_Bot)
 
 ### Quick Start (CLI demo)
 
